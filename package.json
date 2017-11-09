@@ -1,0 +1,23 @@
+{
+  "name": "mean-stack-demo",
+  "version": "1.0.0",
+  "description": "A MongoDB ExpressJS Angular 4 NodeJS user registration/authorization demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mongoDB",
+    "ExpressJS",
+    "Angular",
+    "4",
+    "NodeJS",
+    "user",
+    "registration",
+    "user",
+    "authorization",
+    "demo"
+  ],
+  "author": "Erik Zeng",
+  "license": "ISC"
+}
