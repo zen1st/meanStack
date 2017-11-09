@@ -1,0 +1,30 @@
+<div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>Username</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+	
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>user.id</td>
+        <td>user.username</td>
+        <td>user.firstname</td>
+        <td>user.lastname</td>
+        <td>
+			<button type="button" class="btn btn-default btn-sm" (click)="updateUser(user._id)">
+			<span class="glyphicon glyphicon-pencil"></span> Edit 
+			</button>
+			<button type="button" class="btn btn-default btn-sm" (click)="deleteUser(user._id)">
+			<span class="glyphicon glyphicon-remove"></span>  Delete
+			</button>
+		</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
