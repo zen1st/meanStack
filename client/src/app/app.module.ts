@@ -10,6 +10,11 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
+import { ModalComponent } from './modal/modal.component';
+
+import { AlertService, AuthenticationService, UserService } from './_services/index';
+import { customHttpProvider } from './_helpers/index';
 
 @NgModule({
   declarations: [
@@ -17,7 +22,9 @@ import { RegisterComponent } from './register/register.component';
     HomeComponent,
     FooterComponent,
     UserListComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +32,12 @@ import { RegisterComponent } from './register/register.component';
 	FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+	AlertService, 
+	AuthenticationService, 
+	UserService,
+	customHttpProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

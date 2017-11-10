@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { User } from './_models/index';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  
+  currentUser: User;
+  
+  constructor() {
+    this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
+  }
+	
+  logout(event) 
+  {
+	localStorage.removeItem('currentUser');
+	location.reload();
+  }
 }
