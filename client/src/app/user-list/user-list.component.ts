@@ -13,7 +13,9 @@ export class UserListComponent implements OnInit {
 	
     currentUser: User;
     users: User[] = [];
-
+	
+	selectedUser: User;
+	
     constructor(private userService: UserService) {
         this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
     }
@@ -24,6 +26,12 @@ export class UserListComponent implements OnInit {
 
     deleteUser(_id: string) {
         this.userService.delete(_id).subscribe(() => { this.loadAllUsers() });
+    }
+	
+	editUser(user: User) {
+		this.selectedUser = user;
+		//alert(user._id);
+        //this.userService.update(user).subscribe(() => { this.loadAllUsers() });
     }
 
     private loadAllUsers() {

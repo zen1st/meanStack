@@ -15,6 +15,7 @@ import { ModalComponent } from './modal/modal.component';
 
 import { AlertService, AuthenticationService, UserService } from './_services/index';
 import { customHttpProvider } from './_helpers/index';
+import { EditUserComponent } from './edit-user/edit-user.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { customHttpProvider } from './_helpers/index';
     UserListComponent,
     RegisterComponent,
     LoginComponent,
-    ModalComponent
+    ModalComponent,
+    EditUserComponent
   ],
   imports: [
     BrowserModule,
