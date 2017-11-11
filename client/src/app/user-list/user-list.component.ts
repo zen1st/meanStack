@@ -30,8 +30,6 @@ export class UserListComponent implements OnInit {
 	
 	editUser(user: User) {
 		this.selectedUser = user;
-		//alert(user._id);
-        //this.userService.update(user).subscribe(() => { this.loadAllUsers() });
     }
 
     private loadAllUsers() {
