@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { User } from '../_models/index';
 
 @Component({
   selector: 'app-home',
@@ -8,9 +9,15 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  currentUser: User;
+  
+  constructor() 
+  {
+	  this.currentUser = JSON.parse(localStorage.getItem('currentUser')).username;
+	}
 
   ngOnInit() {
+	  
   }
 
 }
