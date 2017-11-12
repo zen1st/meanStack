@@ -16,6 +16,7 @@ import { ModalComponent } from './modal/modal.component';
 import { AlertService, AuthenticationService, UserService } from './_services/index';
 import { customHttpProvider } from './_helpers/index';
 import { EditUserComponent } from './edit-user/edit-user.component';
+import { AuthGuard } from './_guards/index';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { EditUserComponent } from './edit-user/edit-user.component';
   providers: [
 	AlertService, 
 	AuthenticationService, 
+	AuthGuard,
 	UserService,
 	customHttpProvider
   ],
